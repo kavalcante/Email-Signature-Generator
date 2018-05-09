@@ -20,7 +20,7 @@ function presentSignature(fName, signature){
   // show user the the results
   document.getElementById("demo").innerHTML=signature;
   //suggest to the user to edit or make another
-  document.getElementById("build-button").innerHTML = "Update";
+  document.getElementById("build-button").innerHTML = "Atualizar";
   // add signature to hidden input field
   $('#zc-input').val(signature);
   // add HTML to file link
@@ -35,9 +35,9 @@ function copyToClipboard() {
   });
   client.on('dataRequested', function(client, args){
        client.setText(signature);
-       document.getElementById("copy-button").innerHTML = "HTML Copied! Copy again?";
+       document.getElementById("copy-button").innerHTML = "HTML copiado! Copiar novamente?";
   });
-  document.getElementById("copy-button").innerHTML = "HTML Copied! Copy again?";
+  document.getElementById("copy-button").innerHTML = "HTML copiado! Copiar novamente?";
 }
 
 function addSignatureToFile(filename, emailSig) {
@@ -49,7 +49,11 @@ function addSignatureToFile(filename, emailSig) {
 
 function formatPhoneNumber(number){
   var numberStripped = number.replace(/[^a-zA-Z0-9]/g, '');
-  var numberTailored = numberStripped.replace(/(\d\d\d)(\d\d\d)(\d\d\d\d)/, "$1.$2.$3");
+  if (numberStripped.length === 10) {
+    var numberTailored = numberStripped.replace(/(\d\d)(\d\d\d\d)(\d\d\d\d)/, "($1) $2-$3");
+  } else {
+    var numberTailored = numberStripped.replace(/(\d\d)(\d)(\d\d\d\d)(\d\d\d\d)/, "($1) $2 $3-$4");    
+  }
   return numberTailored;
 }
 
@@ -179,7 +183,7 @@ function moveCompanyLogo(sig, topSec, bottomSec){
   var $el =  $(sig);
   // if no headshot image do this...
   $($el).find(topSec)
-    .attr('src',serverPath + '/assets/images/lane-college.png')
+    .attr('src',serverPath + '/assets/images/logo-cotabox.png')
     .removeAttr('height','100%')
     .css('border-radius','0');
   $($el).find(".company-span")

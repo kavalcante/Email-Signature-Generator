@@ -2,13 +2,13 @@
 //////
 // setup vars ***
 //////
-var companyName = 'Dromygosh Agency';
-var companyInitals = 'DMG';
+var companyName = 'Cotabox';
+var companyInitals = 'Cotabox';
 // server path ***
 // this may change based on your local or live server set
 var www = "";
 if(window.location.href.indexOf("www") > -1){ www = "www."};
-var serverPath = "http://0.0.0.0:8000";
+var serverPath = "http://localhost:8080";
 // custom video tutorial link
 var tutorialVideoLink = serverPath + "/assets/tutorial/lane-college-signature-tutorial_s.mp4";
 // defaults
@@ -47,15 +47,13 @@ $(document).ready(function() {
     $(results).find("a:contains(" + fileExt + ")").each(function () {
       teamImgs.push($(this).text().trim());
     });
-    createDataSelectBox("Add your headshot", "headshot", teamImgs);
+    // createDataSelectBox("Add your headshot", "headshot", teamImgs);
     $(".chosen-select").chosen({width: "100%"});
-    createTextField("First Name*", "first", "John");
-    createTextField("Last Name*", "last", "Smith");
-    createTextField("Credentials", "creds", "Ph.D");
-    createTextField("Position/Title", "title", "Director of Awesomeness");
-    createTextField("Division", "division", "Division");
-    createTextField("Phone", "phone", "901.555.5555");
-    createTextField("Cell Phone", "cellphone", "901.555.5555");
+    createTextField("Nome*", "first", "João");
+    createTextField("Sobrenome*", "last", "Cavalcante");
+    createTextField("Cargo", "title", "Director of Awesomeness");
+    createTextField("Telefone", "phone", "(11) 1234-5678");
+    createTextField("E-mail", "email", "kavalcante@cotabox.com.br");
   });
 });
 
@@ -66,17 +64,17 @@ function buidSignature() {
   //Get the value of input fields with id="INPUT-FIELD-ID" ***
   first = document.getElementById("first").value;
   last = document.getElementById("last").value;
-  creds = document.getElementById("creds").value;
+  creds = '';
   if(creds !== '') creds = ', ' + creds;
   title = document.getElementById("title").value;
-  division = document.getElementById("division").value;
+  division = '';
   phone = formatPhoneNumber( document.getElementById("phone").value );
-  cellphone = formatPhoneNumber( document.getElementById("cellphone").value );
+  email = document.getElementById("email").value;
 
   $.ajax({
     url:"./dist/code.html",  
     success:function(data) {
-      headshot = document.getElementById("headshot").value;
+      headshot = '';
       // put in all the variables need here ***
       // to add data for `dist/code.html` email signature template
       signature = convertStringToTemplate(
@@ -87,6 +85,7 @@ function buidSignature() {
         creds, 
         title, 
         phone, 
+        email, 
         serverPath
       );
       console.log(headshot);
@@ -100,7 +99,7 @@ function buidSignature() {
       if(title===''){signature = removeElementFromTemplate('title', signature);}
       if(division===''){signature = removeElementFromTemplate('division', signature);}
       if(phone===''){signature = removeElementFromTemplate('phone', signature);}
-      if(cellphone===''){signature = removeElementFromTemplate('cellphone', signature);}
+      if(email===''){signature = removeElementFromTemplate('email', signature);}
 
       // show the results && pass the first name for file download
       presentSignature(first, signature);

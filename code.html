@@ -5,17 +5,17 @@
 		tr {margin:0;padding:0;}
 		.headshot {border-radius: 100%; max-width:100%; max-height: 100%;}
 		.font {font-family:helvetica,arial,sans-serif;}
-		.inner-td{margin:0;padding:0;white-space:nowrap;}
+		.inner-td{margin:0;padding:0;white-space:nowrap; margin-bottom: 3px; display: block}
 		.color-tr{color:#b0a49b;}
 		.logo-td1 {width:86px;margin:0;padding-right:9px;}
 		.logo-td2{width:5px;}
-		.right-top-td{margin:0;padding:0; line-height: 1.3em;}
+		.right-top-td{margin:0;padding:0;}
 		.right-table{border:none;text-decoration:none;font-family:helvetica,arial,sans-serif;font-size:12px;color:#b0b0b0;border-collapse:collapse;-webkit-text-size-adjust:none;}
-		.name-span{font-size:1.25em;color:#D13040;}
+		.name-span{font-size:1.25em;color:#187caf;}
 		.cred-span{font-size:1.25em;color:#919191;}
 		.position-span{color:#919191;}
 		.company-span{color:#919191; font-weight: 600;}
-		.phone-letter{color:#D13040;}
+		.phone-letter{color:#187caf;}
 		.no-dec{border:none;text-decoration:none;}
 		.phone-number{border:none;color:#919191;text-decoration:none;}
 		.web-link{color:#919191;text-decoration:none;}
@@ -25,17 +25,17 @@
 	<div>
 		<table width="320" id="sig" cellspacing="0" cellpadding="0" border-spacing="0">
 			<tr>
-				<td width="80" class="top-td">
+				<td width="55" class="top-td" style="vertical-align: top;">
 					<!-- Headshot -->
-					<img id="top-logo" class="headshot" border="0" width="60" height="60" src="${serverPath}/assets/images/staff/${headshot}">
+					<img id="top-logo" class="headshot" border="0" width="45" src="${serverPath}/assets/images/staff/${headshot}">
 				</td>
 				<!-- Right Side Info -->
 				<td valign="top" class="right-top-td">
 					<table id="sig2" cellspacing="0" cellpadding="0" border-spacing="0" class="right-table">
 						<!-- Name and Credetials -->
 						<tr>
-							<td class="inner-td font">
-								<b><span class="name-span">${first} ${last}</span></b><span id="creds" class="cred-span">${creds}</span>
+							<td class="inner-td font" style="display: block">
+								<b><span class="name-span">${first} ${last}</span></b>
 							</td>
 						</tr>
 						<!-- Title/Position -->
@@ -44,53 +44,45 @@
 								<span class="position-span">${title}</span>
 							</td>
 						</tr>
-						<!-- Division -->
-						<tr id="division">
-							<td class="inner-td font">
-								<span class="position-span">${division}</span>
-							</td>
-						</tr>
 						<!-- Phone Number -->
 						<tr class="color-tr" id="phone">
 							<td class="inner-td">
-								<span class="phone-letter">P&nbsp;</span><a href="tel:${phone}" target="_blank" class="no-dec"><span class="phone-number">${phone}</span></a>
+								<span class="phone-letter">Telefone:&nbsp;</span><a href="tel:${phone}" target="_blank" class="no-dec"><span class="phone-number">${phone}</span></a>
 							</td>
 						</tr>
 						<!-- Cell Phone -->
-						<tr class="color-tr" id="cellphone">
+						<tr class="color-tr" id="email">
 							<td class="inner-td">
-								<span class="phone-letter">C&nbsp;</span><a href="tel:${cellphone}" target="_blank" class="no-dec"><span class="phone-number">${cellphone}</span></a>
+								<span class="phone-letter">E-mail:&nbsp;</span><a href="mailto:${email}" target="_blank" class="no-dec"><span class="phone-number">${email}</span></a>
 							</td>
 						</tr>
 					</table>
 				</td>
 			</tr>
 		</table>
-		<table width="320" id="sig" cellspacing="0" cellpadding="0" border-spacing="0">
+		<table width="320" id="sig" cellspacing="0" cellpadding="0" border-spacing="0" style="margin-top: 20px;">
 			<tr>
 				<td width="80" class="top-td">
 					<!-- Logo -->
-					<a href="https://www.lanecollege.edu/"><img id="bottom-logo" border="0" width="60" height="80" src="${serverPath}/assets/images/lane-crest.png"></a>
+					<a href="https://cotabox.com.br/"><img id="bottom-logo" border="0" width="70" src="${serverPath}/assets/images/logo-cotabox.png"></a>
 				</td>
 				<!-- Right Side Info -->
 				<td valign="top" class="right-top-td" id="address-content">
-					<table id="sig3" cellspacing="0" cellpadding="0" border-spacing="0" class="right-table">
+				</td>
+			<tr style="margin-top: 20px !important">
+				<td width="100%">
+					<table cellspacing="0" cellpadding="0" border-spacing="0" class="right-table">
 						<!-- Company Name -->
-						<tr class="color-tr">
-							<td class="inner-td">
-								<span class="company-span">Lane College</span>
-							</td>
-						</tr>
 						<!-- Website -->
 						<tr class="color-tr">
 							<td class="inner-td">
-								<a href="https://www.lanecollege.edu/" target="_blank" class="no-dec"><span class="web-link">www.lanecollege.edu</span></a></span>
+								<a href="https://cotabox.com.br/" target="_blank" class="no-dec"><span class="web-link">www.cotabox.com.br</span></a></span>
 							</td>
 						</tr>
 						<!-- Address -->
 						<tr>
 							<td class="inner-td">
-								<span class="position-span">545 Lane Ave.<br> Jackson, TN 38301</span>
+								<span class="position-span">Rod. Gastão dal Farra KM 5<br>Parque Técnológico Botucatu - Sala 5<br> Jardim Aeroporto, Botucatu - SP<br>CEP: 18605-525</span>
 							</td>
 						</tr>
 					</table>

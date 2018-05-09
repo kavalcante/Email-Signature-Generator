@@ -27,7 +27,7 @@
   <link rel="stylesheet" type="text/css" href="assets/js/vendor/chosen/chosen.min.css">
 
   <!-- Site Properities -->
-  <title>SH Email Signature Creator</title>
+  <title>Cotabox Assinatura</title>
 
   <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Open+Sans:300italic,400,300,700' rel='stylesheet' type='text/css'>
 
@@ -37,33 +37,24 @@
 </head>
 <body id="home">
 
-<h1 class="ui center aligned header">
-  Build your <span id="company-name"></span> email signature.
-</h1>
-<h2 class="ui center aligned header">
-  Sodium Halogen &copy;<script>document.write(new Date().getFullYear())</script>
-</h2>
-<p id="tutorialVideo" class="ui center aligned header">
-  Need help? <a href="" target="_blank">Watch this tutorial video</a>.
-</p>
 <div class="ui page grid overview">
   <div class="ui two wide column"></div>
   <div class="twelve wide column">
     <div class="ui two column aligned stackable divided grid">
       <div class="column">
-        <h1>Awesome Signature Creator</h1>
-        <p>Please input into these fields</p>
+        <h1>Gerador de Assinatura</h1>
+        <p>Por favor preencha as informações abaixo</p>
         <div id="form" class="ui form left">
           <!-- // JS added fields -->
         </div>
 
-        <button type="button" id="build-button" class="ui button" onclick="buidSignature()">Build My Signature</button>
+        <button type="button" id="build-button" class="ui button" onclick="buidSignature()">Gerar Assinatura</button>
       </div>
       <div class="column">
         <div id="demo" class="left"></div>
         <div id="directions" class="left" style="display: none;">
-          <br><br><h2>Scroll Down to copy HTML to clipboard.</h2>
-          <p>Outlook Signature tips:</p>
+          <br><br><h2>Desça a tela para copiar o HTML.</h2>
+          <p>Dicas para colocar sua assinatura no Outlook:</p>
           <ul>
             <li><a href="./assets/tutorial/edit-signatures-outlook-2016.png" target="_blank">Outlook 2016 screenshot</a></li>
             <li><a href="./assets/tutorial/add-file-signature-outlook-2016.mp4" target="_blank">Outlook 2016 video</a></p></li>
@@ -76,9 +67,9 @@
 
     <center>
       <button id="copy-button" class="ui teal button center" type="button" onclick="copyToClipboard()" data-clipboard-target="zc-input" style="display: none;">
-          Copy HTML version to clipboard!
+          Copiar HTML!
       </button>
-      <a id="download-file-button" class="ui orange button center" type="button" href="#" style="display: none;">Download HTML File</a>
+      <a id="download-file-button" class="ui orange button center" type="button" href="#" style="display: none;">Baixar HTML</a>
     </center>
 
   </div>
