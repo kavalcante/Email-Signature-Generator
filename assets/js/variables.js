@@ -18,13 +18,7 @@ var first, signature;
 var teamImgs = ["", "No Photo"];
 var fileExt = ".jpg";
 function getTeamImages(){
-  return $.ajax({
-    //This will retrieve the contents of the folder if the folder is configured as 'browsable'
-    url: serverPath + '/assets/images/staff/',
-    success: function (data) {
-      //List all jpg file names in the folder
-    }
-  });
+  return true
 }
 
 //////
