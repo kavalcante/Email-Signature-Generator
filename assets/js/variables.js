@@ -8,7 +8,7 @@ var companyInitals = 'Cotabox';
 // this may change based on your local or live server set
 var www = "";
 if(window.location.href.indexOf("www") > -1){ www = "www."};
-var serverPath = "https://cotabox.github.io/Email-Signature-Generator/";
+var serverPath = "https://cotabox.github.io/Email-Signature-Generator";
 // custom video tutorial link
 var tutorialVideoLink = serverPath + "/assets/tutorial/lane-college-signature-tutorial_s.mp4";
 // defaults
