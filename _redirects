@@ -1,1 +1,5 @@
+# Redirect default Netlify subdomain to primary domain
 https://pensive-wiles-44f9cb.netlify.com/* https://assinatura.cotabox.com.br/:splat 301!
+
+# These extra rules are required because HTTPS is not forced
+http://pensive-wiles-44f9cb.netlify.com/* https://assinatura.cotabox.com.br/:splat 301!
