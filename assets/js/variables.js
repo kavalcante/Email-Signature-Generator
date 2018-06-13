@@ -2,13 +2,13 @@
 //////
 // setup vars ***
 //////
-var companyName = 'Cotabox';
-var companyInitals = 'Cotabox';
+var companyName = 'Nutrir';
+var companyInitals = 'Nutrir';
 // server path ***
 // this may change based on your local or live server set
 var www = "";
 if(window.location.href.indexOf("www") > -1){ www = "www."};
-var serverPath = "https://assinatura.cotabox.com.br";
+var serverPath = "http://localhost:8080";
 // custom video tutorial link
 var tutorialVideoLink = serverPath + "/assets/tutorial/lane-college-signature-tutorial_s.mp4";
 // defaults
@@ -47,7 +47,7 @@ $(document).ready(function() {
     createTextField("Sobrenome*", "last", "Cavalcante");
     createTextField("Cargo", "title", "Director of Awesomeness");
     createTextField("Telefone", "phone", "(11) 1234-5678");
-    createTextField("E-mail", "email", "kavalcante@cotabox.com.br");
+    createTextField("E-mail", "email", "kavalcante@nutrir.agr.br");
   });
 });
 

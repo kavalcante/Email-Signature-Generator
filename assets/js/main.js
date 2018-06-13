@@ -183,7 +183,7 @@ function moveCompanyLogo(sig, topSec, bottomSec){
   var $el =  $(sig);
   // if no headshot image do this...
   $($el).find(topSec)
-    .attr('src',serverPath + '/assets/images/logo-cotabox.png')
+    .attr('src',serverPath + '/assets/images/nutrir_logo.png')
     .removeAttr('height','100%')
     .css('border-radius','0');
   $($el).find(".company-span")
